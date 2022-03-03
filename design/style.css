@@ -40,6 +40,11 @@ main {
 h1 {
     font-size: 3rem;
     font-weight: 700;
+    margin-bottom: 2.5rem;
+}
+h2 {
+    font-size:1.4rem;
+    font-weight: 400;    
 }
 
 /* Central card */
@@ -87,6 +92,56 @@ h1 {
     align-items: left;
     width:35rem;
     margin-top: 7rem;
+    margin-right: 9.5rem;
 }
+
+.content-box {
+    width:100%;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--divider-1);
+}
+
+.drop-down {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.drop-down:hover > h2{
+    font-weight: 700;
+    color: var(--text-2)
+}
+
+.drop-down:hover {
+    cursor:pointer
+}
+
+.drop-down > img {
+    height:10px;
+    width: auto;  
+    
+}
+
+/* Dynamic classes */
+
+.bolded {
+    font-weight: 700;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+    margin-top: 1rem;
+    line-height: 2rem;
+}
+
+.rotated {
+    transform: rotateX(180deg);
+}
+
 
 

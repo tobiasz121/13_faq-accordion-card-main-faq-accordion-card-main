@@ -20,12 +20,62 @@
         <img class='card-img-woman' src='images/illustration-woman-online-desktop.svg' alt="">
         <div class="card-inner-info">
           <h1>FAQ</h1>
-          
+          <div class="content-box">
+            <div class="drop-down">
+              <h2>How many team members can I invite?</h2>
+              <img src="images/icon-arrow-down.svg " alt="">              
+            </div>
+            <p class="hidden">As many as you want</p>
+          </div>
+          <div class="content-box">
+            <div class="drop-down">
+              <h2>What is the maximum file upload size?</h2>
+              <img src="images/icon-arrow-down.svg " alt="">              
+            </div>
+            <p class="hidden">No more than 2GB. All files in your account must fit your allotted storage space</p>
+          </div>
+          <div class="content-box">
+            <div class="drop-down">
+              <h2>How do I reset my password?</h2>
+              <img src="images/icon-arrow-down.svg " alt="">              
+            </div>
+            <p class="hidden">Reset it using power of your brain.</p>
+          </div>
+          <div class="content-box">
+            <div class="drop-down">
+              <h2>Can I cancel mu subscription?</h2>
+              <img src="images/icon-arrow-down.svg " alt="">              
+            </div>
+            <p class="hidden">You can, unless you are Russian.</p>
+          </div>
+          <div class="content-box">
+            <div class="drop-down">
+              <h2>Do you provide additional support</h2>
+              <img src="images/icon-arrow-down.svg " alt="">              
+            </div>
+            <p class="hidden">No</p>
+          </div>
+
         </div>
       </div>
 
     </div>
   </main> 
   </div>
+<script>
+const buttons = document.querySelectorAll('.drop-down')
+buttons.forEach(button => {
+  button.addEventListener('click', event => {
+  const p = event.currentTarget.nextElementSibling
+  const img = event.currentTarget.lastElementChild
+  const h2 = event.currentTarget.firstElementChild  
+  console.log(p)
+  p.classList.toggle('visible')
+  img.classList.toggle('rotated')
+  h2.classList.toggle('bolded')
+  // event.currentTarget.classList.toggle('visible')
+})
+})
+</script>
 </body>
 </html>

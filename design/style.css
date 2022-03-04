@@ -30,11 +30,12 @@ body {
 }
 
 main {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 h1 {
@@ -50,7 +51,7 @@ h2 {
 /* Central card */
 
 .card-outer {
-    width:92rem;
+    min-width:92rem;
     height: 51rem;    
     border-radius: 2rem;
     background: var(--white);
@@ -62,12 +63,16 @@ h2 {
     
 }
 
-.card-img-woman {
+.card-img-woman-dstp {
     position: absolute;
     top:7rem;
     left:-8.5rem;
     display: inline-block;
         
+}
+
+.card-img-woman-mob {
+    display: none;
 }
 
 .card-img-box {    
@@ -84,6 +89,7 @@ h2 {
     overflow: hidden;
     display: flex;
     justify-content: right;
+    flex-shrink: 0
 }
 
 .card-inner-info {
@@ -141,6 +147,81 @@ h2 {
 
 .rotated {
     transform: rotateX(180deg);
+}
+
+/* Responsive mobile */
+
+@media screen and (max-width:700px){
+
+    .card-outer {
+        min-width: 30rem;    ;
+        width:90%;
+        height: auto;    
+        border-radius: 1rem;
+        background: var(--white);
+        background-image: none;
+        background-position: 0;
+        background-repeat: no-repeat;
+        position: relative;        
+        
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .card-inner-info {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        width:90%;
+        max-width: 35rem;
+        min-width: 25rem;
+        margin:14rem 0 5rem 0
+    }
+
+    .card-inner {
+        justify-content: center;
+        background-image: url('../images/bg-pattern-desktop.svg');
+        background-size: 270px auto;
+        background-repeat: no-repeat;
+        background-position: 50% -150px;
+    }
+ 
+    .card-img-woman-dstp {
+        position: absolute;
+        top:7rem;
+        left:-8.5rem;
+        display: none;
+            
+    }
+    
+    .card-img-woman-mob {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left:50%;
+        transform: translateX(-50%) translateY(-62%);
+        width: 27.5rem;
+        height: auto;
+    }
+
+    .card-img-box {
+        display: none;
+        
+    }
+
+    .card-inner {        
+        overflow: visible;
+       
+    }
+    
+
+
+
+
+
+
 }
 
 
